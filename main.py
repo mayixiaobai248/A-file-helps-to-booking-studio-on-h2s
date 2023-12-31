@@ -22,16 +22,16 @@ def information():
     #     return False
 
 def send_email1():
-    HOST = 'smtp.163.com'   # 网易邮箱smtp
+    HOST = 'xxxxx'   # 网易邮箱smtp
     PORT = '465'
-    fajianren = 'imformation_yidan@163.com'   #发送人邮箱
-    shoujianren = 'ma726389@126.com'   #收件人邮箱
+    fajianren = 'xxxxx'   #发送人邮箱
+    shoujianren = 'xxxxxx'   #收件人邮箱
     title = '更新信息通知'     # 邮件标题
     # new_pattern = information()  #提取网页内容列表
     # context = new_pattern[0]  # 邮件内容
     context = "有房子啦可以去看"
     smtp = smtplib.SMTP_SSL(HOST, 465)  # 启用SSL发信, 端口一般是465
-    res = smtp.login(user=fajianren, password='OXKULJMDSBBGLALK') # 登录验证，password是邮箱授权码而非密码，需要去网易邮箱手动开启
+    res = smtp.login(user=fajianren, password=xxxxxx) # 登录验证，password是邮箱授权码而非密码，需要去网易邮箱手动开启
     print('发送结果：', res)
     msg = '\n'.join(
         ['From: {}'.format(fajianren), 'To: {}'.format(shoujianren), 'Subject: {}'.format(title), '', context])
@@ -41,14 +41,14 @@ def send_email1():
 def send_email2():
     HOST = 'smtp.163.com'   # 网易邮箱smtp
     PORT = '465'
-    fajianren = 'imformation_yidan@163.com'   #发送人邮箱
-    shoujianren = 'ma726389@126.com'   #收件人邮箱
+    fajianren = 'xxxxxx'   #发送人邮箱
+    shoujianren = 'xxxxxxx'   #收件人邮箱
     title = '更新信息通知'     # 邮件标题
     # new_pattern = information()  #提取网页内容列表
     # context = new_pattern[0]  # 邮件内容
     context = "房子被订了"
     smtp = smtplib.SMTP_SSL(HOST, 465)  # 启用SSL发信, 端口一般是465
-    res = smtp.login(user=fajianren, password='OXKULJMDSBBGLALK') # 登录验证，password是邮箱授权码而非密码，需要去网易邮箱手动开启
+    res = smtp.login(user=xxxxxx, password=xxxxxx) # 登录验证，password是邮箱授权码而非密码，需要去网易邮箱手动开启
     print('发送结果：', res)
     msg = '\n'.join(
         ['From: {}'.format(fajianren), 'To: {}'.format(shoujianren), 'Subject: {}'.format(title), '', context])
